@@ -1,17 +1,31 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
-import { PlannerModule } from '@ns/planner';
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './visual/app.component';
+
+import { PlannerModule, PlannerService } from '@ns/planner';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
-  imports: [
+  imports: 
+  [
     BrowserModule,
-    PlannerModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+
+    BrowserModule,
+    PlannerModule,
   ],
-  providers: [],
+  providers: 
+  [
+    PlannerService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
