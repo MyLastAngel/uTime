@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './visual/app.component';
 
-import { PlannerModule, PlannerService } from '@ns/planner';
+import { ApiService, PlannerModule, PlannerService } from '@ns/planner';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { PlannerModule, PlannerService } from '@ns/planner';
   ],
   providers: 
   [
-    PlannerService,
+    PlannerService
   ],
   bootstrap: [AppComponent]
 })
